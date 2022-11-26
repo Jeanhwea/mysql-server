@@ -5111,6 +5111,7 @@ void THD::reset_for_next_command() {
 void dispatch_sql_command(THD *thd, Parser_state *parser_state) {
   DBUG_TRACE;
   DBUG_PRINT("dispatch_sql_command", ("query: '%s'", thd->query().str));
+  DBUG_PRINT("dispatch_sql_command", ("avocado: thread_id=%u, query_id=%ld", thd->thread_id(), thd->query_id));
 
   DBUG_EXECUTE_IF("parser_debug", turn_parser_debug_on(););
 

@@ -3492,6 +3492,7 @@ bool Optimize_table_order::fix_semijoin_strategies() {
       handled_tables |= join->best_positions[i].table->table_ref->map();
     }
 
+    DBUG_PRINT("fix_semijoin_strategies", ("avocado: tableno=%d, sj_strategy=%u", tableno, pos->sj_strategy));
     remaining_tables |= pos->table->table_ref->map();
   }
 
@@ -4599,6 +4600,9 @@ void Optimize_table_order::advance_sj_state(table_map remaining_tables,
   */
   if (sj_strategy != SJ_OPT_NONE)
     pos->set_prefix_cost(best_cost, best_rowcount);
+
+
+  DBUG_PRINT("advance_sj_state", ("avocado: idx=%d, sj_strategy=%u", idx, sj_strategy));
 }
 
 /**

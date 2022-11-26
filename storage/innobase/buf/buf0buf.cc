@@ -3885,6 +3885,8 @@ void Buf_fetch<T>::read_page() {
   bool success{};
   auto sync = m_mode != Page_fetch::SCAN;
 
+  DBUG_PRINT("avocado:read_page", ("space: %u, page_no: %u", m_page_id.space(), m_page_id.page_no()));
+
   if (sync) {
     success = buf_read_page(m_page_id, m_page_size);
   } else {

@@ -684,6 +684,8 @@ void btr_cur_search_to_nth_level(
 
   DBUG_TRACE;
 
+  // DBUG_PRINT("avocado:btr_cur_search_to_nth_level", ("level: %lu", level));
+
   btr_search_t *info;
   mem_heap_t *heap = nullptr;
   ulint offsets_[REC_OFFS_NORMAL_SIZE];

@@ -27,3 +27,6 @@ heatwaveml.*
 automl.egg-info/
 _userconf.sh
 scalability_jobs_*
+out/
+target/
+cmake-build-debug/
