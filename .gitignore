@@ -3071,3 +3071,5 @@ client/mysql_ssl_rsa_setup
 
 # Allow
 !include/*/boost/geometry/*
+
+build/*
