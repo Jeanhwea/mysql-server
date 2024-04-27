@@ -5,6 +5,7 @@
 tags
 TAGS
 TAGS_sorted_by_file
+cscope.*
 
 # googletest files
 source_downloads
