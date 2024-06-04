@@ -7132,6 +7132,7 @@ bool parse_sql(THD *thd, Parser_state *parser_state,
 
   thd->push_diagnostics_area(parser_da, false);
 
+  DBUG_PRINT("rtc", ("query=[%s]", thd->query().str));
   bool mysql_parse_status = thd->sql_parser();
 
   thd->pop_internal_handler();
