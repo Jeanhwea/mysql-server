@@ -1328,7 +1328,7 @@ int MYSQLlex(YYSTYPE *yacc_yylval, YYLTYPE *yylloc, THD *thd) {
   token = lex_one_token(yylval, thd);
   yylloc->cpp.start = lip->get_cpp_tok_start();
   yylloc->raw.start = lip->get_tok_start();
-  DBUG_PRINT("rtc", ("lex: token=%d, lexeme=[%s]", token, yylloc->cpp.start));
+  DBUG_PRINT("rtc", ("scan token=%d, lexeme=[%s]", token, yylloc->cpp.start));
 
   switch (token) {
     case WITH:
